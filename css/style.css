@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+/* Menu fixo no topo */
+
+body {
+font-family: 'Roboto', sans-serif;  
+
+}
+
+.top-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #411C0C;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Nome da empresa */
+.top-menu .brand-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+/* Logo da empresa */
+.top-menu .brand-logo {
+  width: 100px;
+  height: 100px;
+  background-image: url(../img/logo_brigaderia.jpg);
+  background-size: contain; 
+  background-repeat: no-repeat;
+  margin: 200px auto;
+  border-radius: 50%; 
+  overflow: hidden;
+  border: 10px solid #FFEBF1;
+}
+
+/* Icones de navegação */
+.top-menu .nav-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* Estilo dos icones */
+.top-menu .nav-icons i {
+  font-size: 20px;
+  color: #fff; /* Cor do texto */
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+      "cabecalho"
+      "conteudo"
+      "rodape";
+}
+
+.cabecalho {
+  grid-area: cabecalho;
+}
+
+.conteudo {
+  grid-area: conteudo;
+  margin-top: 100px;
+}
+
+.menu-options ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-options li {
+  list-style: none;
+  margin: 0 10%;
+}
+
+p, h2, iframe{
+  margin-top: 15px;
+}
+
+.quem-somos, .photos, .location {
+  margin: 20px;
+  border: 1px solid #D6166F;
+  padding: 25px;
+  text-align: center;
+}
+
+
+
+
+
+.rodape {
+  grid-area: rodape;
+}
