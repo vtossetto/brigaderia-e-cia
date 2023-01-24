@@ -2,10 +2,15 @@
 
 /* Menu fixo no topo */
 
-body {
-font-family: 'Roboto', sans-serif;  
-
+* {
+  font-family: 'Poppins', sans-serif;
+  color: #411C0C;
 }
+
+body {
+  background-color: #FFEBF1;
+}
+
 
 .top-menu {
   position: fixed;
@@ -19,53 +24,61 @@ font-family: 'Roboto', sans-serif;
   justify-content: space-between;
   padding: 0 20px;
   box-sizing: border-box;
+
 }
 
 /* Nome da empresa */
 .top-menu .brand-name {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 40px;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-left: 10px;
 }
 
 /* Logo da empresa */
 .top-menu .brand-logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100px;
   height: 100px;
   background-image: url(../img/logo_brigaderia.jpg);
-  background-size: contain; 
+  background-size: contain;
   background-repeat: no-repeat;
-  margin: 200px auto;
-  border-radius: 50%; 
+  border-radius: 50%;
   overflow: hidden;
-  border: 10px solid #FFEBF1;
+  border: 5px solid #FFEBF1;
+
 }
 
 /* Icones de navegação */
 .top-menu .nav-icons {
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  justify-content: space-between;
+  color: #fff;
 }
 
 /* Estilo dos icones */
 .top-menu .nav-icons i {
-  font-size: 20px;
-  color: #fff; /* Cor do texto */
-  margin-left: 10px;
+  font-size: 25px;
   cursor: pointer;
   position: relative;
-  z-index: 1; 
+
+  margin: 10px;
+  color: #FFf;
 }
 
 .grid-container {
   display: grid;
   grid-template-areas:
-      "cabecalho"
-      "conteudo"
-      "rodape";
+    "cabecalho"
+    "conteudo"
+    "rodape";
+  grid-template-columns: auto;
+  grid-template-rows: 60px auto 50px;
+  
 }
 
 .cabecalho {
@@ -77,6 +90,10 @@ font-family: 'Roboto', sans-serif;
   margin-top: 100px;
 }
 
+.rodape {
+  grid-area: rodape;
+}
+
 .menu-options ul {
   display: flex;
   justify-content: space-between;
@@ -85,23 +102,26 @@ font-family: 'Roboto', sans-serif;
 .menu-options li {
   list-style: none;
   margin: 0 10%;
+  font-weight: bold;
 }
 
-p, h2, iframe{
-  margin-top: 15px;
+p,
+h2,
+iframe {
+  margin-top: 5px;
 }
 
-.quem-somos, .photos, .location {
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.quem-somos,
+.photos,
+.products,
+.location {
   margin: 20px;
   border: 1px solid #D6166F;
   padding: 25px;
   text-align: center;
-}
-
-
-
-
-
-.rodape {
-  grid-area: rodape;
 }
